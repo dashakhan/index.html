@@ -12,51 +12,55 @@
             color: #fff;
             padding: 50px;
         }
-       @keyframes glitch {
+
+        /* Glitch animation for h1 */
+        @keyframes glitch {
             0% { text-shadow: 2px 2px red; }
             25% { text-shadow: -2px -2px cyan; }
             50% { text-shadow: 2px -2px lime; }
             75% { text-shadow: -2px 2px yellow; }
             100% { text-shadow: 2px 2px red; }
         }
-                flash {
+
+        /* Flashing animation for status text */
+        @keyframes flash {
             0% { color: yellow; }
             50% { color: red; }
             100% { color: yellow; }
         }
-        .status {
-            animation: flash 1s infinite;
-              font-weight: bold;
-        }
-        shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
 
-body {
-    animation: shake 0.3s infinite alternate;
-}
+        /* Shake animation */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+
         h1 {
             color: red;
             animation: glitch 0.3s infinite alternate;
-
         }
+
         .bug-report {
             border: 2px dashed #ff4500;
             padding: 20px;
             display: inline-block;
             text-align: left;
             background-color: #222;
+            animation: shake 0.5s infinite alternate; /* Apply shake to bug-report */
         }
+
         .status {
-            color: yellow;
+            font-weight: bold;
+            animation: flash 1s infinite alternate;
         }
+
         .solution {
             color: lightgreen;
         }
+
         .footer {
             margin-top: 20px;
             font-style: italic;
