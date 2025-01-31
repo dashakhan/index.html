@@ -19,6 +19,26 @@
             75% { text-shadow: -2px 2px yellow; }
             100% { text-shadow: 2px 2px red; }
         }
+                flash {
+            0% { color: yellow; }
+            50% { color: red; }
+            100% { color: yellow; }
+        }
+        .status {
+            animation: flash 1s infinite;
+              font-weight: bold;
+        }
+        shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+body {
+    animation: shake 0.3s infinite alternate;
+}
         h1 {
             color: red;
             animation: glitch 0.3s infinite alternate;
