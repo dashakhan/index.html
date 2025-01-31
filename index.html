@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bug Report: Aging Detected</title>
         <script>
-        alert("🚨 WARNING: Aging Process Detected! Proceed with cake 🎂");
-        window.stop(); // Stops rendering until user dismisses alert
+        if (!confirm("🚨 WARNING: Aging Process Detected! Proceed with cake 🎂?")) {
+            document.write("<h1 style='color:red;'>Operation Cancelled</h1>");
+            throw new Error("User cancelled the process."); // Stops execution
+        }
     </script>
     <style>
         body {
