@@ -12,8 +12,17 @@
             color: #fff;
             padding: 50px;
         }
+       @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            25% { text-shadow: -2px -2px cyan; }
+            50% { text-shadow: 2px -2px lime; }
+            75% { text-shadow: -2px 2px yellow; }
+            100% { text-shadow: 2px 2px red; }
+        }
         h1 {
             color: red;
+            animation: glitch 0.3s infinite alternate;
+
         }
         .bug-report {
             border: 2px dashed #ff4500;
